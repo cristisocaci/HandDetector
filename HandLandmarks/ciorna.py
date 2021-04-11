@@ -24,16 +24,17 @@ def wrist_line_localization(gray_img):
     cv2.waitKey()
 
 
-rgb_img = cv2.imread('img/hand2.jpg')
-bgr_img = cv2.cvtColor(rgb_img, cv2.COLOR_RGB2BGR)
-gray = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2GRAY)
+if __name__ == "__main__":
+    rgb_img = cv2.imread('img/hand2.jpg')
+    bgr_img = cv2.cvtColor(rgb_img, cv2.COLOR_RGB2BGR)
+    gray = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2GRAY)
 
-# wrist_line_localization(gray)
+    # wrist_line_localization(gray)
 
-plt.imshow(gray)
-plt.show()
-directional_img = directional_image(bgr_img)
-plt.imshow(directional_img)
-plt.show()
+    plt.imshow(gray)
+    plt.show()
+    directional_img = directional_image(bgr_img)
+    plt.imshow(directional_img)
+    plt.show()
 
-cv2.destroyAllWindows()
+    cv2.destroyAllWindows()
